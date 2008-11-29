@@ -1,0 +1,11 @@
+--- munin-plugins-muninexchange-20081128/php/php_eaccelerator~	2008-11-29 13:19:37.000000000 +0100
++++ munin-plugins-muninexchange-20081128/php/php_eaccelerator	2008-11-30 00:47:00.000000000 +0100
+@@ -32,7 +32,7 @@
+ url   = ENV['url'] || 'http://127.0.0.1/control.php'
+ 
+ if ARGV[0]=="config"
+-  print "EAccelerator Monitoring\n"
++  print "graph_info EAccelerator Monitoring\n"
+   print "graph_title PHP Eaccelerator\n"
+   print "graph_category Apache\n"
+   print "Memoryusagepercentage.label Memory Usage %\n"  
