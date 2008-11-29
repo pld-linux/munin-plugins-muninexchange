@@ -14,6 +14,7 @@ Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	a8622f88eb7105220d358a8d7d764c96
 Patch0:		%{name}-vserver.patch
 Patch1:		%{name}-postfix.patch
+Patch2:		%{name}-other.patch
 URL:		http://muninexchange.projects.linpro.no/
 BuildRequires:	dos2unix
 BuildRequires:	perl-devel
@@ -62,6 +63,7 @@ Summary:	Munin plugins from MuninExchange - apache
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - apache
 Group:		Daemons
 Requires:	munin-common
+Requires:	perl(Linux::Smaps)
 
 %description apache
 This package contains plugins for Munin from MuninExchange
@@ -695,6 +697,7 @@ find -type f -print0 | xargs -0 dos2unix
 
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
