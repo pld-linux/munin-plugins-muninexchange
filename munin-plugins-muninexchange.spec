@@ -7,7 +7,7 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20081128
-Release:	1.2
+Release:	1.3
 License:	GPL
 Group:		Daemons
 Source0:	%{name}-%{version}.tar.bz2
@@ -15,6 +15,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-vserver.patch
 Patch1:		%{name}-postfix.patch
 URL:		http://muninexchange.projects.linpro.no/
+BuildRequires:	dos2unix
 BuildRequires:	perl-devel
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildArch:	noarch
@@ -689,6 +690,9 @@ znajdującym się na http://muninexchange.projects.linpro.no/.
 
 %prep
 %setup -q
+
+find -type f -print0 | xargs -0 dos2unix
+
 %patch0 -p1
 %patch1 -p1
 
