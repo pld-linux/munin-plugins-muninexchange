@@ -1,6 +1,6 @@
 diff -ur munin-plugins-muninexchange-20081128/postfix/dkimproxy_mails munin/postfix/dkimproxy_mails
---- munin-plugins-muninexchange-20081128/postfix/dkimproxy_mails	2008-11-28 18:35:13.000000000 +0100
-+++ munin/postfix/dkimproxy_mails	2008-11-29 13:16:14.000000000 +0100
+--- munin-plugins-muninexchange-20081128/postfix/dkimproxy_mails	2008-11-29 13:19:37.000000000 +0100
++++ munin/postfix/dkimproxy_mails	2008-11-29 13:19:43.000000000 +0100
 @@ -47,7 +47,7 @@
  if [ "$1" = "config" ]; then
          echo 'graph_title DKIM Proxy mails'
@@ -11,8 +11,8 @@ diff -ur munin-plugins-muninexchange-20081128/postfix/dkimproxy_mails munin/post
          echo 'graph_args --base 1000 -l 0'
  #       echo 'graph_total total'
 diff -ur munin-plugins-muninexchange-20081128/postfix/postfix_filtered munin/postfix/postfix_filtered
---- munin-plugins-muninexchange-20081128/postfix/postfix_filtered	2008-11-28 18:35:14.000000000 +0100
-+++ munin/postfix/postfix_filtered	2008-11-29 13:16:14.000000000 +0100
+--- munin-plugins-muninexchange-20081128/postfix/postfix_filtered	2008-11-29 13:19:37.000000000 +0100
++++ munin/postfix/postfix_filtered	2008-11-29 13:19:43.000000000 +0100
 @@ -60,7 +60,7 @@
  		else
  			echo 'graph_order allowed rbl policy helo client sender recipient relay'
@@ -23,8 +23,8 @@ diff -ur munin-plugins-muninexchange-20081128/postfix/postfix_filtered munin/pos
  	echo 'graph_args --base 1000 -l 0'
  
 diff -ur munin-plugins-muninexchange-20081128/postfix/postfix_mailfiltered munin/postfix/postfix_mailfiltered
---- munin-plugins-muninexchange-20081128/postfix/postfix_mailfiltered	2008-11-28 18:35:15.000000000 +0100
-+++ munin/postfix/postfix_mailfiltered	2008-11-29 13:16:14.000000000 +0100
+--- munin-plugins-muninexchange-20081128/postfix/postfix_mailfiltered	2008-11-29 13:19:37.000000000 +0100
++++ munin/postfix/postfix_mailfiltered	2008-11-29 13:19:43.000000000 +0100
 @@ -30,7 +30,7 @@
  if [ "$1" = "config" ]; then
  	echo 'graph_title Postfix daily filtering'
@@ -35,8 +35,8 @@ diff -ur munin-plugins-muninexchange-20081128/postfix/postfix_mailfiltered munin
  	echo 'graph_args --base 1000 -l 0'
  	echo 'graph_total total'
 diff -ur munin-plugins-muninexchange-20081128/postfix/postfix-policyd munin/postfix/postfix-policyd
---- munin-plugins-muninexchange-20081128/postfix/postfix-policyd	2008-11-28 18:35:14.000000000 +0100
-+++ munin/postfix/postfix-policyd	2008-11-29 13:16:14.000000000 +0100
+--- munin-plugins-muninexchange-20081128/postfix/postfix-policyd	2008-11-29 13:19:37.000000000 +0100
++++ munin/postfix/postfix-policyd	2008-11-29 13:19:43.000000000 +0100
 @@ -25,7 +25,7 @@
  if [ "$1" = "config" ]; then
          echo 'graph_title Postfix-Policyd daily filtering'
@@ -54,8 +54,8 @@ diff -ur munin-plugins-muninexchange-20081128/postfix/postfix-policyd munin/post
 \ No newline at end of file
 +echo "blacklisted.value ${BLACKLISTED}"
 diff -ur munin-plugins-muninexchange-20081128/postfix/postfix_stats munin/postfix/postfix_stats
---- munin-plugins-muninexchange-20081128/postfix/postfix_stats	2008-11-28 18:35:16.000000000 +0100
-+++ munin/postfix/postfix_stats	2008-11-29 13:16:14.000000000 +0100
+--- munin-plugins-muninexchange-20081128/postfix/postfix_stats	2008-11-29 13:19:37.000000000 +0100
++++ munin/postfix/postfix_stats	2008-11-29 13:19:43.000000000 +0100
 @@ -19,7 +19,7 @@
  system.type COUNTER
  graph_title Postfix statistics
@@ -66,8 +66,8 @@ diff -ur munin-plugins-muninexchange-20081128/postfix/postfix_stats munin/postfi
  received.label received
  delivered.label delivered
 diff -ur munin-plugins-muninexchange-20081128/postfix/postgrey munin/postfix/postgrey
---- munin-plugins-muninexchange-20081128/postfix/postgrey	2008-11-28 18:35:17.000000000 +0100
-+++ munin/postfix/postgrey	2008-11-29 13:16:14.000000000 +0100
+--- munin-plugins-muninexchange-20081128/postfix/postgrey	2008-11-29 13:19:37.000000000 +0100
++++ munin/postfix/postgrey	2008-11-29 13:19:43.000000000 +0100
 @@ -30,7 +30,7 @@
  if [ "$1" = "config" ]; then
  	echo 'graph_title Postgrey daily filtering'
