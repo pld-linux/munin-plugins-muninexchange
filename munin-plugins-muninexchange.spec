@@ -15,6 +15,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}-vserver.patch
 Patch1:		%{name}-postfix.patch
 Patch2:		%{name}-other.patch
+Patch3:		%{name}-php.patch
 URL:		http://muninexchange.projects.linpro.no/
 BuildRequires:	dos2unix
 BuildRequires:	perl-devel
@@ -698,6 +699,7 @@ find -type f -print0 | xargs -0 dos2unix
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
