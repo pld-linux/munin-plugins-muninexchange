@@ -1,0 +1,33 @@
+--- munin-plugins-muninexchange-20081128/other/vsftpd-rel~	2008-11-29 13:19:37.000000000 +0100
++++ munin-plugins-muninexchange-20081128/other/vsftpd-rel	2008-11-29 21:04:06.000000000 +0100
+@@ -37,10 +37,10 @@
+ 
+ install_ok()
+ {
+-    tempfile=$(which tempfile)
++    mktemp=$(which mktemp)
+     if [ ! -r ${LOGFILE} -o \
+ 	 -z "${LOGTAIL}" -o ! -x "${LOGTAIL}" -o \
+-	 -z "${tempfile}" -o ! -x "${tempfile}" ]
++	 -z "${mktemp}" -o ! -x "${mktemp}" ]
+     then
+ 	return 1
+     fi
+@@ -50,7 +50,7 @@
+ 
+ if [ "$1" = "autoconf" ]
+ then
+-    tmpfile=`which tempfile`
++    tmpfile=`which mktemp`
+     if install_ok
+     then
+ 	echo yes
+@@ -82,7 +82,7 @@
+ test install_ok || exit 1
+ 
+ touch -d now-5minutes+30seconds $PIVOT
+-TEMP=`tempfile`
++TEMP=`mktemp`
+ trap "rm -f ${PIVOT} ${TEMP}" INT EXIT
+ 
+ test -n "$TEMP" -a -w "$TEMP" || exit 1
