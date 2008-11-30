@@ -1,0 +1,11 @@
+--- munin-plugins-muninexchange-20081128/openvpn/openvpn_clients~	2008-11-29 13:19:37.000000000 +0100
++++ munin-plugins-muninexchange-20081128/openvpn/openvpn_clients	2008-11-30 01:43:48.000000000 +0100
+@@ -42,7 +42,7 @@
+ 
+ use strict;
+ 
+-my $statuslogfile = "/etc/openvpn/openvpn-status.log";
++my $statuslogfile = $ENV{'logfile'} || "/etc/openvpn/openvpn-status.log";
+ my $clients = 0;
+ 
+ if($ARGV[0] and $ARGV[0] eq "autoconf" ) {
