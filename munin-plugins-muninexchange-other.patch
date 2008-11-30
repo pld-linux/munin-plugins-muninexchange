@@ -31,3 +31,18 @@
  trap "rm -f ${PIVOT} ${TEMP}" INT EXIT
  
  test -n "$TEMP" -a -w "$TEMP" || exit 1
+--- munin-plugins-muninexchange-20081128/other/nagiosstatus~	2008-11-29 13:19:37.000000000 +0100
++++ munin-plugins-muninexchange-20081128/other/nagiosstatus	2008-11-30 01:16:55.000000000 +0100
+@@ -113,10 +113,10 @@
+     if($type) {
+ 	push(@{$values{$type}}, $_);
+     }
+-    if(/^host \{/) {
++    if(/^hoststatus \{/) {
+ 	$type = "host";
+     }
+-    if(/^service \{/) {
++    if(/^servicestatus \{/) {
+ 	$type = "service";
+     }
+ }
