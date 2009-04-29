@@ -1,0 +1,20 @@
+--- ./apache/apache_watch_~	2008-11-30 01:59:30.000000000 +0100
++++ ./apache/apache_watch_	2009-04-26 20:30:15.107587925 +0200
+@@ -95,7 +95,7 @@
+   print "graph_vlabel activity\n";
+   my $i = 0;
+   foreach my $server (sort (@servers)) {
+-    (my $txtserver = $server) =~ s/(-|\.)/\_/g;
++    (my $txtserver = $server) =~ s/(-|\.|:|\\)/\_/g;
+     my $draw = ($i==0) ? 'AREA' : 'STACK';
+     if ($action eq "bytes") {
+       print "${txtserver}.label $server\n";
+@@ -114,7 +114,7 @@
+ foreach my $string (sort (@data)) {
+   my ($server, $ifInOctets, $ifOutOctets, $ifRequests, $ifDocuments) =
+     split (/\s/, $string);
+-  (my $txtserver = $server) =~ s/(-|\.)/\_/g;
++  (my $txtserver = $server) =~ s/(-|\.|:|\\)/\_/g;
+   if ($action eq "documents") {
+     print "${txtserver}.value $ifDocuments\n";
+   } elsif ($action eq "requests") {
