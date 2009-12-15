@@ -19,6 +19,7 @@ Patch3:		%{name}-php.patch
 Patch4:		%{name}-openvpn.patch
 Patch5:		%{name}-samba.patch
 Patch6:		%{name}-apache.patch
+Patch7:		%{name}-heimdal.patch
 URL:		http://muninexchange.projects.linpro.no/
 BuildRequires:	dos2unix
 BuildRequires:	perl-devel
@@ -228,6 +229,20 @@ This package contains plugins for Munin from MuninExchange
 repository located at http://muninexchange.projects.linpro.no/.
 
 %description -l pl.UTF-8 groupwise
+Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
+znajdującym się na http://muninexchange.projects.linpro.no/.
+
+%package heimdal
+Summary:	Munin plugins from MuninExchange - heimdal
+Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - heimdal
+Group:		Daemons
+Requires:	munin-node
+
+%description heimdal
+This package contains plugins for Munin from MuninExchange
+repository located at http://muninexchange.projects.linpro.no/.
+
+%description -l pl.UTF-8 heimdal
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
 znajdującym się na http://muninexchange.projects.linpro.no/.
 
@@ -831,6 +846,7 @@ find -type f -print0 | xargs -0 dos2unix
 %patch4 -p1
 %patch5 -p1
 %patch6 -p0
+%patch7 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -838,8 +854,15 @@ install -d $RPM_BUILD_ROOT%{_datadir}/munin/plugins/
 
 for i in * ; do
 	if [ -d $i ]; then
-		echo "%defattr(644,root,root,755)" >$i.list
-		(cd $i ; for f in * ; do echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f" ; done) >>$i.list
+		if [ $i = "other" ]; then
+			echo "%defattr(644,root,root,755)" >other.list
+			echo "%defattr(644,root,root,755)" >heimdal.list
+			(cd $i ; for f in * ; do [[ $f = heimdal* ]] || echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f" ; done) >>other.list
+			(cd $i ; for f in * ; do [[ $f = heimdal* ]] && echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f" ; done) >>heimdal.list
+		else
+			echo "%defattr(644,root,root,755)" >$i.list
+			(cd $i ; for f in * ; do echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f" ; done) >>$i.list
+		fi
 	fi
 done
 
@@ -867,6 +890,7 @@ rm -rf $RPM_BUILD_ROOT
 %files freeradius -f freeradius.list
 %files games -f games.list
 %files groupwise -f groupwise.list
+%files heimdal -f heimdal.list
 %files icecast -f icecast.list
 %files iperf -f iperf.list
 %files java -f java.list
