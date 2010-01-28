@@ -77,3 +77,11 @@ diff -ur munin-plugins-muninexchange-20081128/postfix/postgrey munin/postfix/pos
  	echo 'graph_vlabel Count'
  	echo 'graph_scale no'
  
+--- munin-plugins-muninexchange-20091204/postfix/postfix_mail_stats~	2010-01-28 09:10:25.776080505 +0100
++++ munin-plugins-muninexchange-20091204/postfix/postfix_mail_stats	2010-01-28 09:11:19.885332982 +0100
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/bash
++#!/bin/bash
+ #
+ # Made by Boudewijn Ector, for Boudewijn Ector IT.
+ # Comments can be sent to (boudewijn<AT>boudewijnector'dot'NL)
