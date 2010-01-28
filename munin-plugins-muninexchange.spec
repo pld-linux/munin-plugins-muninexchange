@@ -23,6 +23,8 @@ Patch7:		%{name}-heimdal.patch
 URL:		http://muninexchange.projects.linpro.no/
 BuildRequires:	dos2unix
 BuildRequires:	perl-devel
+BuildRequires:	rpm-perlprov
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
