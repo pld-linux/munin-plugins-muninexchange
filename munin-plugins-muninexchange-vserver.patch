@@ -92,3 +92,14 @@
 +			print name "_ucpu.value " u
 +		}' /proc/virtual/$i/sched
 +done
+--- munin-plugins-muninexchange-20091204/vserver/vserver_procs~	2010-01-28 09:10:25.827081278 +0100
++++ munin-plugins-muninexchange-20091204/vserver/vserver_procs	2010-01-31 19:40:18.466259880 +0100
+@@ -19,7 +19,7 @@
+     echo 'graph_title Vserver Process Overview'
+     echo 'graph_args --base 1000 -l 0 '
+     echo 'graph_vlabel number of processes'
+-    echo 'graph_category processes'
++    echo 'graph_category vserver'
+     echo 'graph_info This graph shows the number of processes in each vserver context.'
+ 
+     for vserver in `vserver-stat | sed 1d | awk '{print $8}'`; do
