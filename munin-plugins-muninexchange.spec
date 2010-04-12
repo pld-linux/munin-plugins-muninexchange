@@ -1,4 +1,3 @@
-#
 # TODO:
 #	- better descriptions?
 #
@@ -7,7 +6,7 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20091204
-Release:	2
+Release:	3
 License:	GPL
 Group:		Daemons
 Source0:	%{name}-%{version}.tar.bz2
@@ -30,12 +29,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
 %description -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package amavis
 Summary:	Munin plugins from MuninExchange - amavis
@@ -44,12 +43,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description amavis
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 amavis
+%description amavis -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package amule
 Summary:	Munin plugins from MuninExchange - amule
@@ -58,12 +57,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description amule
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 amule
+%description amule -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package apache
 Summary:	Munin plugins from MuninExchange - apache
@@ -73,12 +72,12 @@ Requires:	munin-node
 Requires:	perl(Linux::Smaps)
 
 %description apache
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 apache
+%description apache -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package apt
 Summary:	Munin plugins from MuninExchange - apt
@@ -87,12 +86,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description apt
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 apt
+%description apt -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package asterisk
 Summary:	Munin plugins from MuninExchange - asterisk
@@ -101,12 +100,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description asterisk
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 asterisk
+%description asterisk -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package bacula
 Summary:	Munin plugins from MuninExchange - bacula
@@ -115,12 +114,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description bacula
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 bacula
+%description bacula -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package bind
 Summary:	Munin plugins from MuninExchange - bind
@@ -129,12 +128,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description bind
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 bind
+%description bind -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package boinc
 Summary:	Munin plugins from MuninExchange - boinc
@@ -143,12 +142,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description boinc
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 boinc
+%description boinc -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package condor
 Summary:	Munin plugins from MuninExchange - condor
@@ -157,12 +156,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description condor
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 condor
+%description condor -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package disk
 Summary:	Munin plugins from MuninExchange - disk
@@ -171,12 +170,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description disk
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 disk
+%description disk -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package flashmediaserver
 Summary:	Munin plugins from MuninExchange - flashmediaserver
@@ -185,12 +184,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description flashmediaserver
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 flashmediaserver
+%description flashmediaserver -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package freeradius
 Summary:	Munin plugins from MuninExchange - freeradius
@@ -199,12 +198,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description freeradius
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 freeradius
+%description freeradius -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package games
 Summary:	Munin plugins from MuninExchange - games
@@ -213,12 +212,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description games
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 games
+%description games -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package groupwise
 Summary:	Munin plugins from MuninExchange - groupwise
@@ -227,12 +226,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description groupwise
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 groupwise
+%description groupwise -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package heimdal
 Summary:	Munin plugins from MuninExchange - heimdal
@@ -241,12 +240,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description heimdal
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 heimdal
+%description heimdal -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package icecast
 Summary:	Munin plugins from MuninExchange - icecast
@@ -255,12 +254,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description icecast
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 icecast
+%description icecast -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package iperf
 Summary:	Munin plugins from MuninExchange - iperf
@@ -269,12 +268,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description iperf
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 iperf
+%description iperf -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package java
 Summary:	Munin plugins from MuninExchange - java
@@ -283,12 +282,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description java
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 java
+%description java -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package mediawiki
 Summary:	Munin plugins from MuninExchange - mediawiki
@@ -297,12 +296,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description mediawiki
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 mediawiki
+%description mediawiki -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package memcache
 Summary:	Munin plugins from MuninExchange - memcache
@@ -311,12 +310,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description memcache
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 memcache
+%description memcache -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package mysql
 Summary:	Munin plugins from MuninExchange - mysql
@@ -325,12 +324,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description mysql
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 mysql
+%description mysql -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package mythtv
 Summary:	Munin plugins from MuninExchange - mythtv
@@ -339,12 +338,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description mythtv
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 mythtv
+%description mythtv -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package network
 Summary:	Munin plugins from MuninExchange - network
@@ -353,12 +352,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description network
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 network
+%description network -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package nfs
 Summary:	Munin plugins from MuninExchange - nfs
@@ -367,12 +366,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description nfs
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 nfs
+%description nfs -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package nginx
 Summary:	Munin plugins from MuninExchange - nginx
@@ -381,12 +380,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description nginx
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 nginx
+%description nginx -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package openldap
 Summary:	Munin plugins from MuninExchange - openldap
@@ -395,12 +394,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description openldap
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 openldap
+%description openldap -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package openvpn
 Summary:	Munin plugins from MuninExchange - openvpn
@@ -409,12 +408,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description openvpn
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 openvpn
+%description openvpn -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package oracle
 Summary:	Munin plugins from MuninExchange - oracle
@@ -423,12 +422,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description oracle
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 oracle
+%description oracle -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package other
 Summary:	Munin plugins from MuninExchange - other
@@ -437,12 +436,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description other
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 other
+%description other -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package php
 Summary:	Munin plugins from MuninExchange - php
@@ -451,12 +450,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description php
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 php
+%description php -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package postfix
 Summary:	Munin plugins from MuninExchange - postfix
@@ -465,12 +464,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description postfix
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 postfix
+%description postfix -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package postgresql
 Summary:	Munin plugins from MuninExchange - postgresql
@@ -479,12 +478,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description postgresql
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 postgresql
+%description postgresql -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package powerdns
 Summary:	Munin plugins from MuninExchange - powerdns
@@ -493,12 +492,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description powerdns
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 powerdns
+%description powerdns -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package printing
 Summary:	Munin plugins from MuninExchange - printing
@@ -507,12 +506,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description printing
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 printing
+%description printing -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package processes
 Summary:	Munin plugins from MuninExchange - processes
@@ -521,12 +520,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description processes
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 processes
+%description processes -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package proftpd
 Summary:	Munin plugins from MuninExchange - proftpd
@@ -535,12 +534,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description proftpd
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 proftpd
+%description proftpd -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package puppet
 Summary:	Munin plugins from MuninExchange - puppet
@@ -549,12 +548,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description puppet
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 puppet
+%description puppet -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package pure-ftpd
 Summary:	Munin plugins from MuninExchange - pure-ftpd
@@ -563,12 +562,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description pure-ftpd
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 pure-ftpd
+%description pure-ftpd -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package qmail
 Summary:	Munin plugins from MuninExchange - qmail
@@ -577,12 +576,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description qmail
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 qmail
+%description qmail -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package radiator
 Summary:	Munin plugins from MuninExchange - radiator
@@ -591,12 +590,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description radiator
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 radiator
+%description radiator -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package rtorrent
 Summary:	Munin plugins from MuninExchange - rtorrent
@@ -605,12 +604,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description rtorrent
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 rtorrent
+%description rtorrent -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package samba
 Summary:	Munin plugins from MuninExchange - samba
@@ -619,12 +618,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description samba
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 samba
+%description samba -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package scalix
 Summary:	Munin plugins from MuninExchange - scalix
@@ -633,12 +632,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description scalix
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 scalix
+%description scalix -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package sensors
 Summary:	Munin plugins from MuninExchange - sensors
@@ -647,12 +646,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description sensors
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 sensors
+%description sensors -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package squid
 Summary:	Munin plugins from MuninExchange - squid
@@ -661,12 +660,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description squid
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 squid
+%description squid -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package system
 Summary:	Munin plugins from MuninExchange - system
@@ -675,12 +674,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description system
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 system
+%description system -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package teamspeak
 Summary:	Munin plugins from MuninExchange - teamspeak
@@ -689,12 +688,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description teamspeak
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 teamspeak
+%description teamspeak -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package time
 Summary:	Munin plugins from MuninExchange - time
@@ -703,12 +702,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description time
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 time
+%description time -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package tomcat
 Summary:	Munin plugins from MuninExchange - tomcat
@@ -717,12 +716,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description tomcat
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 tomcat
+%description tomcat -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package tor
 Summary:	Munin plugins from MuninExchange - tor
@@ -731,12 +730,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description tor
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 tor
+%description tor -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package ups
 Summary:	Munin plugins from MuninExchange - ups
@@ -745,12 +744,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description ups
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 ups
+%description ups -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package varnish
 Summary:	Munin plugins from MuninExchange - varnish
@@ -759,12 +758,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description varnish
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 varnish
+%description varnish -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package vmware
 Summary:	Munin plugins from MuninExchange - vmware
@@ -773,12 +772,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description vmware
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 vmware
+%description vmware -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package vserver
 Summary:	Munin plugins from MuninExchange - vserver
@@ -787,12 +786,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description vserver
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 vserver
+%description vserver -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package xen
 Summary:	Munin plugins from MuninExchange - xen
@@ -801,12 +800,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description xen
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 xen
+%description xen -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package yum
 Summary:	Munin plugins from MuninExchange - yum
@@ -815,12 +814,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description yum
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 yum
+%description yum -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %package zyxel
 Summary:	Munin plugins from MuninExchange - zyxel
@@ -829,12 +828,12 @@ Group:		Daemons
 Requires:	munin-node
 
 %description zyxel
-This package contains plugins for Munin from MuninExchange
-repository located at http://muninexchange.projects.linpro.no/.
+This package contains plugins for Munin from MuninExchange repository
+located at <http://muninexchange.projects.linpro.no/>.
 
-%description -l pl.UTF-8 zyxel
+%description zyxel -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na http://muninexchange.projects.linpro.no/.
+znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %prep
 %setup -q
@@ -850,20 +849,30 @@ find -type f -print0 | xargs -0 dos2unix
 %patch6 -p0
 %patch7 -p1
 
+grep -r bin/env -l . | xargs sed -i -e '1{
+	s,#!.*bin/env ruby,#!%{__ruby},
+	s,#!.*bin/env python2.5,#!%{__python},
+	s,#!.*bin/env python,#!%{__python},
+	s,#!.*bin/env perl,#!%{__perl},
+}'
+
+# cleanup backups after patching
+find '(' -name '*~' -o -name '*.orig' ')' -print0 | xargs -0 -r -l512 rm -f
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/munin/plugins/
 
-for i in * ; do
+for i in *; do
 	if [ -d $i ]; then
 		if [ $i = "other" ]; then
-			echo "%defattr(644,root,root,755)" >other.list
-			echo "%defattr(644,root,root,755)" >heimdal.list
-			(cd $i ; for f in * ; do [[ $f = heimdal* ]] || echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f" ; done) >>other.list
-			(cd $i ; for f in * ; do [[ $f = heimdal* ]] && echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f" ; done) >>heimdal.list
+			echo "%defattr(644,root,root,755)" > other.list
+			echo "%defattr(644,root,root,755)" > heimdal.list
+			(cd $i; for f in *; do [[ $f = heimdal* ]] || echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f"; done) >> other.list
+			(cd $i; for f in *; do [[ $f = heimdal* ]] && echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f"; done) >> heimdal.list
 		else
-			echo "%defattr(644,root,root,755)" >$i.list
-			(cd $i ; for f in * ; do echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f" ; done) >>$i.list
+			echo "%defattr(644,root,root,755)" > $i.list
+			(cd $i; for f in *; do echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f"; done) >> $i.list
 		fi
 	fi
 done
@@ -879,59 +888,116 @@ done
 rm -rf $RPM_BUILD_ROOT
 
 %files amavis -f amavis.list
+%defattr(644,root,root,755)
 %files amule -f amule.list
+%defattr(644,root,root,755)
 %files apache -f apache.list
+%defattr(644,root,root,755)
 %files apt -f apt.list
+%defattr(644,root,root,755)
 %files asterisk -f asterisk.list
+%defattr(644,root,root,755)
 %files bacula -f bacula.list
+%defattr(644,root,root,755)
 %files bind -f bind.list
+%defattr(644,root,root,755)
 %files boinc -f boinc.list
+%defattr(644,root,root,755)
 %files condor -f condor.list
+%defattr(644,root,root,755)
 %files disk -f disk.list
+%defattr(644,root,root,755)
 %files flashmediaserver -f flashmediaserver.list
+%defattr(644,root,root,755)
 %files freeradius -f freeradius.list
+%defattr(644,root,root,755)
 %files games -f games.list
+%defattr(644,root,root,755)
 %files groupwise -f groupwise.list
+%defattr(644,root,root,755)
 %files heimdal -f heimdal.list
+%defattr(644,root,root,755)
 %files icecast -f icecast.list
+%defattr(644,root,root,755)
 %files iperf -f iperf.list
+%defattr(644,root,root,755)
 %files java -f java.list
+%defattr(644,root,root,755)
 %files mediawiki -f mediawiki.list
+%defattr(644,root,root,755)
 %files memcache -f memcache.list
+%defattr(644,root,root,755)
 %files mysql -f mysql.list
+%defattr(644,root,root,755)
 %files mythtv -f mythtv.list
+%defattr(644,root,root,755)
 %files network -f network.list
+%defattr(644,root,root,755)
 %files nfs -f nfs.list
+%defattr(644,root,root,755)
 %files nginx -f nginx.list
+%defattr(644,root,root,755)
 %files openldap -f openldap.list
+%defattr(644,root,root,755)
 %files openvpn -f openvpn.list
+%defattr(644,root,root,755)
 %files oracle -f oracle.list
+%defattr(644,root,root,755)
 %files other -f other.list
+%defattr(644,root,root,755)
 %files php -f php.list
+%defattr(644,root,root,755)
 %files postfix -f postfix.list
+%defattr(644,root,root,755)
 %files postgresql -f postgresql.list
+%defattr(644,root,root,755)
 %files powerdns -f powerdns.list
+%defattr(644,root,root,755)
 %files printing -f printing.list
+%defattr(644,root,root,755)
 %files processes -f processes.list
+%defattr(644,root,root,755)
 %files proftpd -f proftpd.list
+%defattr(644,root,root,755)
 %files puppet -f puppet.list
+%defattr(644,root,root,755)
 %files pure-ftpd -f pure-ftpd.list
+%defattr(644,root,root,755)
 %files qmail -f qmail.list
+%defattr(644,root,root,755)
 %files radiator -f radiator.list
+%defattr(644,root,root,755)
 %files rtorrent -f rtorrent.list
+%defattr(644,root,root,755)
 %files samba -f samba.list
+%defattr(644,root,root,755)
 %files scalix -f scalix.list
+%defattr(644,root,root,755)
 %files sensors -f sensors.list
+%defattr(644,root,root,755)
 %files squid -f squid.list
+%defattr(644,root,root,755)
 %files system -f system.list
+%defattr(644,root,root,755)
 %files teamspeak -f teamspeak.list
+%defattr(644,root,root,755)
 %files time -f time.list
+%defattr(644,root,root,755)
 %files tomcat -f tomcat.list
+%defattr(644,root,root,755)
 %files tor -f tor.list
+%defattr(644,root,root,755)
 %files ups -f ups.list
+%defattr(644,root,root,755)
 %files varnish -f varnish.list
+%defattr(644,root,root,755)
 %files vmware -f vmware.list
+%defattr(644,root,root,755)
 %files vserver -f vserver.list
+%defattr(644,root,root,755)
 %files xen -f xen.list
+%defattr(644,root,root,755)
 %files yum -f yum.list
+%defattr(644,root,root,755)
 %files zyxel -f zyxel.list
+%defattr(644,root,root,755)
