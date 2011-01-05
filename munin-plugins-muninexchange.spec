@@ -6,7 +6,7 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20091204
-Release:	3
+Release:	4
 License:	GPL
 Group:		Daemons
 Source0:	%{name}-%{version}.tar.bz2
@@ -848,6 +848,8 @@ find -type f -print0 | xargs -0 dos2unix
 %patch5 -p1
 %patch6 -p0
 %patch7 -p1
+
+%{__rm} freeradius/{freeradius_acct,freeradius_auth,freeradius_proxy_acct,freeradius_proxy_auth}
 
 grep -r bin/env -l . | xargs sed -i -e '1{
 	s,#!.*bin/env ruby,#!%{__ruby},
