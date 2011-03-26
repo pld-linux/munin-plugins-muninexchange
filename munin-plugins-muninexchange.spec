@@ -6,7 +6,7 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20110326
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Daemons
 Source0:	%{name}-%{version}.tar.bz2
