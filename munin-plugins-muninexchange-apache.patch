@@ -1,5 +1,5 @@
---- ./apache/apache_watch_~	2008-11-30 01:59:30.000000000 +0100
-+++ ./apache/apache_watch_	2009-04-26 20:30:15.107587925 +0200
+--- ./other/apache_watch_~	2008-11-30 01:59:30.000000000 +0100
++++ ./other/apache_watch_	2009-04-26 20:30:15.107587925 +0200
 @@ -95,7 +95,7 @@
    print "graph_vlabel activity\n";
    my $i = 0;

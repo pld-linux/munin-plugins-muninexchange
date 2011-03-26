@@ -1,12 +1,12 @@
---- munin-plugins-muninexchange-20081128/samba/samba_users~	2008-11-30 01:58:28.000000000 +0100
-+++ munin-plugins-muninexchange-20081128/samba/samba_users	2008-12-02 00:28:40.000000000 +0100
+--- munin-plugins-muninexchange-20081128/other/samba_users~	2008-11-30 01:58:28.000000000 +0100
++++ munin-plugins-muninexchange-20081128/other/samba_users	2008-12-02 00:28:40.000000000 +0100
 @@ -36,3 +36,4 @@
  
  echo -n "samba_users.value "
  smbstatus -b 2> /dev/null | grep -c -v -e "^Samba" -e "^---" -e "^PID" -e ^$
 +exit 0
---- munin-plugins-muninexchange-20081128/samba/samba_locked~	2008-11-30 01:58:28.000000000 +0100
-+++ munin-plugins-muninexchange-20081128/samba/samba_locked	2008-12-02 00:28:33.000000000 +0100
+--- munin-plugins-muninexchange-20081128/other/samba_locked~	2008-11-30 01:58:28.000000000 +0100
++++ munin-plugins-muninexchange-20081128/other/samba_locked	2008-12-02 00:28:33.000000000 +0100
 @@ -36,5 +36,4 @@
  
  echo -n "samba_locked.value "

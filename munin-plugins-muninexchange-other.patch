@@ -46,11 +46,3 @@
  	$type = "service";
      }
  }
---- munin-plugins-muninexchange-20081128/other/cpuutil~	2010-01-13 14:31:43.185387210 +0100
-+++ munin-plugins-muninexchange-20081128/other/cpuutil	2010-01-13 14:32:48.222048274 +0100
-@@ -1,4 +1,4 @@
--#!/sbin/sh
-+#!/bin/sh
- 
- # See /usr/include/sys/dk.h !
- PATH=/usr/bin:/usr/sbin:/sbin
