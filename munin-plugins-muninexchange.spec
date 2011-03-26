@@ -18,7 +18,7 @@ Patch3:		%{name}-php.patch
 Patch4:		%{name}-openvpn.patch
 Patch5:		%{name}-samba.patch
 Patch6:		%{name}-apache.patch
-URL:		http://muninexchange.projects.linpro.no/
+URL:		http://exchange.munin-monitoring.org/
 BuildRequires:	dos2unix
 BuildRequires:	perl-devel
 BuildRequires:	rpm-perlprov
