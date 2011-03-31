@@ -1,0 +1,11 @@
+--- munin-plugins-muninexchange-20110326/web-servers/passenger_status~	2011-03-31 13:50:53.205407638 +0200
++++ munin-plugins-muninexchange-20110326/web-servers/passenger_status	2011-03-31 13:51:08.129407638 +0200
+@@ -26,7 +26,7 @@
+ end
+  
+ def output_values
+-  status = `sudo passenger-status`
++  status = `passenger-status`
+   unless $?.success?
+     $stderr.puts "failed executing passenger-status"
+     exit 1

@@ -18,6 +18,7 @@ Patch3:		%{name}-php.patch
 Patch4:		%{name}-openvpn.patch
 Patch5:		%{name}-samba.patch
 Patch6:		%{name}-apache.patch
+Patch7:		%{name}-passenger.patch
 URL:		http://exchange.munin-monitoring.org/
 BuildRequires:	dos2unix
 BuildRequires:	perl-devel
@@ -196,6 +197,7 @@ find -type f -print0 | xargs -0 dos2unix
 %patch4 -p1
 %patch5 -p1
 %patch6 -p0
+%patch7 -p1
 
 grep -r bin/env -l . | xargs sed -i -e '1{
 	s,#!.*bin/env ruby,#!%{__ruby},
