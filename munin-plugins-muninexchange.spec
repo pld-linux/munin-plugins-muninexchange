@@ -6,7 +6,7 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20130823
-Release:	4
+Release:	5
 License:	GPL
 Group:		Daemons
 Source0:	https://github.com/munin-monitoring/contrib/tarball/master/%{name}.tar.gz
@@ -27,7 +27,7 @@ BuildRequires:	rpmbuild(macros) >= 1.268
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq_perl		DateTime::Format::ISO8601 Sys::Virt Sys::Virt::.* VMware::.*
+%define		_noautoreq_perl		DateTime::Format::ISO8601 Sys::Virt Sys::Virt::.* VMware::.* File::Tail::Multi nvidia::ml WWW::Mechanize::TreeBuilder Sun::Solaris::Kstat
 
 %description
 This package contains plugins for Munin from MuninExchange repository
@@ -75,7 +75,12 @@ grep -r bin/env -l plugins/ | xargs sed -i -e '1{
 	s,#!.*bin/env perl,#!%{__perl},
 }'
 
-find plugins/ -type f | xargs sed -i -e 's|#!.*/usr/local/bin/|#!/usr/bin/|'
+find plugins/ -type f | xargs sed -i -e '1{
+	s,#!.*/usr/local/bin/,#!/usr/bin/,
+	s,#!/opt/csw/bin/ruby,#!%{__ruby},
+	s,#!/usr/bin/bash,#!/bin/bash,
+	s,#!/sbin/sh,#!/bin/sh,
+}'
 
 # cleanup backups after patching
 find '(' -name '*~' -o -name '*.orig' ')' -print0 | xargs -0 -r -l512 rm -f
