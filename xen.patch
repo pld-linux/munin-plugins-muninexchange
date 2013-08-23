@@ -149,6 +149,14 @@
  $XMTOP = '/usr/sbin/xentop';
  
  # ah, parameters coming in 
+@@ -48,6 +48,7 @@
+                 
+                 @domains = `$XM list`;
+                 shift(@domains); # we don't need the header line
++                shift(@domains); # we don't need the header line
+                 
+                 foreach $domain ( @domains )
+                 {
 @@ -90,9 +90,9 @@
  @stats = split (/\n/, pop(@chunks));
  
