@@ -1,25 +1,6 @@
 # TODO:
 #	- better descriptions?
 #
-%define	contrib_package()\
-%package %1\
-Summary:	Munin plugins from MuninExchange - %1\
-Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - %1\
-Group:		Daemons\
-Requires:	munin-node\
-\
-%description %1\
-This package contains plugins for Munin from MuninExchange repository\
-located at https://github.com/munin-monitoring/contrib/.\
-\
-%description %1 -l pl.UTF-8\
-Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,\
-znajdującym się na https://github.com/munin-monitoring/contrib/.\
-\
-%files %1 -f %1.list\
-%defattr(644,root,root,755)\
-%{nil}
-
 %include	/usr/lib/rpm/macros.perl
 Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
@@ -54,6 +35,26 @@ located at <http://muninexchange.projects.linpro.no/>.
 %description -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
 znajdującym się na <http://muninexchange.projects.linpro.no/>.
+
+%define	contrib_package()\
+%package %1\
+Summary:	Munin plugins from MuninExchange - %1\
+Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - %1\
+Group:		Daemons\
+Requires:	munin-node\
+Obsoletes:	%*\
+\
+%description %1\
+This package contains plugins for Munin from MuninExchange repository\
+located at https://github.com/munin-monitoring/contrib/.\
+\
+%description %1 -l pl.UTF-8\
+Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,\
+znajdującym się na https://github.com/munin-monitoring/contrib/.\
+\
+%files %1 -f %1.list\
+%defattr(644,root,root,755)\
+%{nil}
 
 %package databases
 Summary:	Munin plugins from MuninExchange - databases
@@ -266,4 +267,4 @@ rm -rf $RPM_BUILD_ROOT
 %files web-servers -f web-servers.list
 %defattr(644,root,root,755)
 
-%contrib_package dupa
+%contrib_package dupa a b c
