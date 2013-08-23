@@ -6,19 +6,18 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20130823
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Daemons
 Source0:	https://github.com/munin-monitoring/contrib/tarball/master/%{name}.tar.gz
 # Source0-md5:	d0b1caf2e18a0edc349184f51d7d0cb5
-Patch0:		%{name}-vserver.patch
-Patch1:		%{name}-postfix.patch
-Patch2:		%{name}-other.patch
-Patch3:		%{name}-php.patch
-Patch4:		%{name}-openvpn.patch
-Patch5:		%{name}-samba.patch
-Patch6:		%{name}-apache.patch
-Patch7:		%{name}-passenger.patch
+Patch0:		%{name}-postfix.patch
+Patch1:		%{name}-other.patch
+Patch2:		%{name}-php.patch
+Patch3:		%{name}-samba.patch
+Patch4:		%{name}-apache.patch
+Patch5:		%{name}-passenger.patch
+Patch6:		xen.patch
 URL:		http://exchange.munin-monitoring.org/
 BuildRequires:	dos2unix
 BuildRequires:	perl-devel
@@ -30,11 +29,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package contains plugins for Munin from MuninExchange repository
-located at <http://muninexchange.projects.linpro.no/>.
+located at https://github.com/munin-monitoring/contrib/.
 
 %description -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na <http://muninexchange.projects.linpro.no/>.
+znajdującym się na https://github.com/munin-monitoring/contrib/>.
 
 %define	contrib_package()\
 %package %1\
@@ -42,7 +41,6 @@ Summary:	Munin plugins from MuninExchange - %1\
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - %1\
 Group:		Daemons\
 Requires:	munin-node\
-Obsoletes:	%*\
 \
 %description %1\
 This package contains plugins for Munin from MuninExchange repository\
@@ -56,155 +54,6 @@ znajdującym się na https://github.com/munin-monitoring/contrib/.\
 %defattr(644,root,root,755)\
 %{nil}
 
-%package databases
-Summary:	Munin plugins from MuninExchange - databases
-Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - databases
-Group:		Daemons
-Requires:	munin-node
-Obsoletes:	munin-plugins-muninexchange-mysql
-
-%description databases
-This package contains plugins for Munin from MuninExchange repository
-located at <http://muninexchange.projects.linpro.no/>.
-
-%description databases -l pl.UTF-8
-Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na <http://muninexchange.projects.linpro.no/>.
-
-%package network
-Summary:	Munin plugins from MuninExchange - network
-Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - network
-Group:		Daemons
-Requires:	munin-node
-Obsoletes:	munin-plugins-muninexchange-powerdns
-
-%description network
-This package contains plugins for Munin from MuninExchange repository
-located at <http://muninexchange.projects.linpro.no/>.
-
-%description network -l pl.UTF-8
-Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na <http://muninexchange.projects.linpro.no/>.
-
-%package other
-Summary:	Munin plugins from MuninExchange - other
-Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - other
-Group:		Daemons
-Requires:	munin-node
-Obsoletes:	munin-plugins-muninexchange-amavis
-Obsoletes:	munin-plugins-muninexchange-amule
-Obsoletes:	munin-plugins-muninexchange-apache
-Obsoletes:	munin-plugins-muninexchange-apt
-Obsoletes:	munin-plugins-muninexchange-asterisk
-Obsoletes:	munin-plugins-muninexchange-bacula
-Obsoletes:	munin-plugins-muninexchange-bind
-Obsoletes:	munin-plugins-muninexchange-boinc
-Obsoletes:	munin-plugins-muninexchange-condor
-Obsoletes:	munin-plugins-muninexchange-disk
-Obsoletes:	munin-plugins-muninexchange-flashmediaserver
-Obsoletes:	munin-plugins-muninexchange-freeradius
-Obsoletes:	munin-plugins-muninexchange-games
-Obsoletes:	munin-plugins-muninexchange-groupwise
-Obsoletes:	munin-plugins-muninexchange-heimdal
-Obsoletes:	munin-plugins-muninexchange-icecast
-Obsoletes:	munin-plugins-muninexchange-iperf
-Obsoletes:	munin-plugins-muninexchange-java
-Obsoletes:	munin-plugins-muninexchange-mediawiki
-Obsoletes:	munin-plugins-muninexchange-memcache
-Obsoletes:	munin-plugins-muninexchange-mysql
-Obsoletes:	munin-plugins-muninexchange-mythtv
-Obsoletes:	munin-plugins-muninexchange-nfs
-Obsoletes:	munin-plugins-muninexchange-openldap
-Obsoletes:	munin-plugins-muninexchange-openvpn
-Obsoletes:	munin-plugins-muninexchange-oracle
-Obsoletes:	munin-plugins-muninexchange-php
-Obsoletes:	munin-plugins-muninexchange-postfix
-Obsoletes:	munin-plugins-muninexchange-postgresql
-Obsoletes:	munin-plugins-muninexchange-printing
-Obsoletes:	munin-plugins-muninexchange-processes
-Obsoletes:	munin-plugins-muninexchange-proftpd
-Obsoletes:	munin-plugins-muninexchange-puppet
-Obsoletes:	munin-plugins-muninexchange-pure-ftpd
-Obsoletes:	munin-plugins-muninexchange-qmail
-Obsoletes:	munin-plugins-muninexchange-radiator
-Obsoletes:	munin-plugins-muninexchange-rtorrent
-Obsoletes:	munin-plugins-muninexchange-samba
-Obsoletes:	munin-plugins-muninexchange-scalix
-Obsoletes:	munin-plugins-muninexchange-sensors
-Obsoletes:	munin-plugins-muninexchange-squid
-Obsoletes:	munin-plugins-muninexchange-teamspeak
-Obsoletes:	munin-plugins-muninexchange-time
-Obsoletes:	munin-plugins-muninexchange-tor
-Obsoletes:	munin-plugins-muninexchange-ups
-Obsoletes:	munin-plugins-muninexchange-varnish
-Obsoletes:	munin-plugins-muninexchange-vmware
-Obsoletes:	munin-plugins-muninexchange-vserver
-Obsoletes:	munin-plugins-muninexchange-xen
-Obsoletes:	munin-plugins-muninexchange-yum
-Obsoletes:	munin-plugins-muninexchange-zyxel
-
-%description other
-This package contains plugins for Munin from MuninExchange repository
-located at <http://muninexchange.projects.linpro.no/>.
-
-%description other -l pl.UTF-8
-Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na <http://muninexchange.projects.linpro.no/>.
-
-%package services
-Summary:	Munin plugins from MuninExchange - services
-Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - services
-Group:		Daemons
-Requires:	munin-node
-Obsoletes:	munin-plugins-muninexchange-icecast
-Obsoletes:	munin-plugins-muninexchange-postfix
-Obsoletes:	munin-plugins-muninexchange-proftpd
-Obsoletes:	munin-plugins-muninexchange-pure-ftpd
-Obsoletes:	munin-plugins-muninexchange-sensors
-Obsoletes:	munin-plugins-muninexchange-squid
-Obsoletes:	munin-plugins-muninexchange-time
-Obsoletes:	munin-plugins-muninexchange-varnish
-
-%description services
-This package contains plugins for Munin from MuninExchange repository
-located at <http://muninexchange.projects.linpro.no/>.
-
-%description services -l pl.UTF-8
-Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na <http://muninexchange.projects.linpro.no/>.
-
-%package system
-Summary:	Munin plugins from MuninExchange - system
-Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - system
-Group:		Daemons
-Requires:	munin-node
-Obsoletes:	munin-plugins-muninexchange-disk
-
-%description system
-This package contains plugins for Munin from MuninExchange repository
-located at <http://muninexchange.projects.linpro.no/>.
-
-%description system -l pl.UTF-8
-Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na <http://muninexchange.projects.linpro.no/>.
-
-%package web-servers
-Summary:	Munin plugins from MuninExchange - web servers
-Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - web servers
-Group:		Daemons
-Requires:	munin-node
-Obsoletes:	munin-plugins-muninexchange-apache
-Obsoletes:	munin-plugins-muninexchange-nginx
-Obsoletes:	munin-plugins-muninexchange-tomcat
-
-%description web-servers
-This package contains plugins for Munin from MuninExchange repository
-located at <http://muninexchange.projects.linpro.no/>.
-
-%description web-servers -l pl.UTF-8
-Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na <http://muninexchange.projects.linpro.no/>.
-
 %prep
 %setup -q -n munin-monitoring-contrib-538cdc9
 
@@ -216,55 +65,198 @@ find -type f -print0 | xargs -0 dos2unix
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
-%patch6 -p0
-%patch7 -p1
+%patch6 -p1
 
-grep -r bin/env -l . | xargs sed -i -e '1{
+grep -r bin/env -l plugins/ | xargs sed -i -e '1{
 	s,#!.*bin/env ruby,#!%{__ruby},
 	s,#!.*bin/env python[^ ]*,#!%{__python},
 	s,#!.*bin/env perl,#!%{__perl},
 }'
 
-sed -i -e 's|#!.*/usr/local/bin/|#!/usr/bin/|' */*
+find plugins/ -type f | xargs sed -i -e 's|#!.*/usr/local/bin/|#!/usr/bin/|'
 
 # cleanup backups after patching
 find '(' -name '*~' -o -name '*.orig' ')' -print0 | xargs -0 -r -l512 rm -f
+
+%{__rm} -r plugins/asterisk/asterisk_*_fax_*
+%{__rm} -r plugins/mail/dovecot
+
+for f in plugins/apache/apache_byprojects/byprojects_* ; do
+	%{__mv} $f plugins/apache/apache_byprojects/apache_$(basename $f)
+done
+for f in plugins/nginx/nginx_byprojects/byprojects_* ; do
+	%{__mv} $f plugins/nginx/nginx_byprojects/nginx_$(basename $f)
+done
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/munin/plugins/
 
-for i in *; do
+for i in plugins/*; do
 	[ -d $i ] || continue
-	echo "%defattr(644,root,root,755)" > $i.list
-	(cd $i; for f in *; do echo "%attr(755,root,root) %{_datadir}/munin/plugins/$f"; done) >> $i.list
+	j=$(basename $i)
+	>$j.list
+	find $i/* -type f | while read f ; do
+		if file $f | grep -qs script ; then
+			ff=$(basename $f)
+			echo "%{_datadir}/munin/plugins/$ff" >>$j.list
+			install -p $f $RPM_BUILD_ROOT%{_datadir}/munin/plugins/
+		fi
+	done
 done
-
-cp -a */* $RPM_BUILD_ROOT%{_datadir}/munin/plugins/
-chmod 755 $RPM_BUILD_ROOT%{_datadir}/munin/plugins/*
-
-touch $RPM_BUILD_ROOT/dupa
-echo /dupa >dupa.list
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files databases -f databases.list
-%defattr(644,root,root,755)
-
-%files network -f network.list
-%defattr(644,root,root,755)
-
-%files other -f other.list
-%defattr(644,root,root,755)
-
-%files services -f services.list
-%defattr(644,root,root,755)
-
-%files system -f system.list
-%defattr(644,root,root,755)
-
-%files web-servers -f web-servers.list
-%defattr(644,root,root,755)
-
-%contrib_package dupa a b c
+%contrib_package amule
+%contrib_package apache
+%contrib_package apt
+%contrib_package aris
+%contrib_package asterisk
+%contrib_package audit
+%contrib_package backuppc
+%contrib_package bacula
+%contrib_package beboxsync
+%contrib_package boinc
+%contrib_package cacti
+%contrib_package celery
+%contrib_package ceph
+%contrib_package chassis
+%contrib_package cherokee
+%contrib_package condor
+%contrib_package cpan
+%contrib_package currentcost
+%contrib_package cyrus
+%contrib_package db2
+%contrib_package disk
+%contrib_package djabberd
+%contrib_package dovecot
+%contrib_package drbd
+%contrib_package drupal
+%contrib_package dspam
+%contrib_package dvb
+%contrib_package dxtv
+%contrib_package ejabberd
+%contrib_package fax
+%contrib_package firebird
+%contrib_package forums
+%contrib_package ftp
+%contrib_package funkytown
+%contrib_package games
+%contrib_package geowebcache
+%contrib_package glance
+%contrib_package glassfish
+%contrib_package google
+%contrib_package gpu
+%contrib_package gunicorn
+%contrib_package hadoop
+%contrib_package haproxy
+%contrib_package healthcheck
+%contrib_package heimdal
+%contrib_package http
+%contrib_package ipvs
+%contrib_package java
+%contrib_package joomla
+%contrib_package kamailio
+%contrib_package keystone
+%contrib_package licensing
+%contrib_package lighttpd
+%contrib_package logins
+%contrib_package lustre
+%contrib_package mail
+%contrib_package memcached
+%contrib_package minecraft
+%contrib_package moblock
+%contrib_package mod_jk
+%contrib_package mogilefs
+%contrib_package mongodb
+%contrib_package monit
+%contrib_package mpd
+%contrib_package mssql
+%contrib_package munin
+%contrib_package mysql
+%contrib_package mythtv
+%contrib_package nagios
+%contrib_package network
+%contrib_package newznab
+%contrib_package nfs-freebsd
+%contrib_package nginx
+%contrib_package noaaport
+%contrib_package nova
+%contrib_package openvpn
+%contrib_package openvz
+%contrib_package oracle
+%contrib_package ossec
+%contrib_package other
+%contrib_package passenger
+%contrib_package php
+%contrib_package postgresql
+%contrib_package power5
+%contrib_package powermta
+%contrib_package printer
+%contrib_package processes
+%contrib_package prosody
+%contrib_package puppet
+%contrib_package qpid
+%contrib_package qpsmtpd
+%contrib_package rabbitmq
+%contrib_package rackspace
+%contrib_package radiator
+%contrib_package reddit_karma
+%contrib_package redis
+%contrib_package relayd
+%contrib_package requesttracker
+%contrib_package riak
+%contrib_package rsync
+%contrib_package rtorrent
+%contrib_package s3
+%contrib_package sabnzbd
+%contrib_package samba
+%contrib_package san
+%contrib_package scalix
+%contrib_package security
+%contrib_package senderscore
+%contrib_package sensors
+%contrib_package services
+%contrib_package sge
+%contrib_package sickbeard
+%contrib_package slony
+%contrib_package smstools
+%contrib_package snmp
+%contrib_package solr
+%contrib_package sourceds
+%contrib_package sphinx
+%contrib_package spotweb
+%contrib_package squeezebox
+%contrib_package squid
+%contrib_package streaming
+%contrib_package swift
+%contrib_package syslog
+%contrib_package system
+%contrib_package teamspeak
+%contrib_package thin
+%contrib_package time
+%contrib_package tomcat
+%contrib_package trafic_ro
+%contrib_package tv
+%contrib_package ubuntu
+%contrib_package ultramonkey
+%contrib_package unicorn
+%contrib_package ups
+%contrib_package varnish
+%contrib_package vdr
+%contrib_package virtualization
+%contrib_package voip
+%contrib_package voldemort
+%contrib_package weather
+%contrib_package websphere
+%contrib_package wiki
+%contrib_package wowza
+%contrib_package wuala
+%contrib_package xastir
+%contrib_package xbnbt
+%contrib_package yacy
+%contrib_package zeo
+%contrib_package zfs
+%contrib_package zimbra
+%contrib_package zope

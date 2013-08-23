@@ -1,0 +1,164 @@
+--- munin.orig/plugins/virtualization/xen	2013-08-23 21:31:56.610001695 +0200
++++ munin/plugins/virtualization/xen	2013-08-23 21:36:22.120001621 +0200
+@@ -18,11 +18,11 @@
+ statefile="/var/lib/munin/plugin-state/munin-plugin-xen.state"
+ 
+ if [ "$1" = "autoconf" ]; then
+-        if which xm > /dev/null ; then
++        if which xl > /dev/null ; then
+                 echo yes
+                 exit 0
+         fi
+-        echo "no (xm not found)"
++        echo "no (xl not found)"
+         exit 1
+ fi
+ 
+@@ -39,7 +39,7 @@
+         echo 'graph_category xen'
+         echo 'graph_info This graph shows how many percent of the CPU time was used by each domain'
+ 
+-	xm list | grep -v "^Name .* Time(s)$" | \
++	xl list | grep -v "^Name\s.*\sTime(s)$" | \
+         while read name domid mem cpu state time console; do
+                 name=`echo $name | sed -e"s/[-.]/_/g"`
+ 		TEST=`less $statefile | grep "^${name}$" | wc -l`
+@@ -66,7 +66,7 @@
+         exit 0
+ fi
+ 
+-xm list | grep -v "^Name .* Time(s)$" | \
++xl list | grep -v "^Name\s.*\sTime(s)$" | \
+ while read name domid mem cpu state time console; do
+         name=`echo $name | sed -e "s/[-.]/_/g"`
+ 	# only seconds
+--- munin.orig/plugins/virtualization/xen_cpu_v2	2013-08-23 21:31:56.613334934 +0200
++++ munin/plugins/virtualization/xen_cpu_v2	2013-08-23 21:40:07.360001590 +0200
+@@ -25,10 +25,10 @@
+ use POSIX;
+ 
+ # Define where to find xm tools
+-my $XM = '/usr/sbin/xm';
++my $XM = '/usr/sbin/xl';
+ my $XMTOP = '/usr/sbin/xentop';
+ my $curtime = time();
+-my $basename = `/usr/bin/basename $0`; chop ($basename);
++my $basename = `/bin/basename $0`; chop ($basename);
+ my $TEMPFILE = "/tmp/$basename";
+ 
+ my $debug = 0;
+--- munin.orig/plugins/virtualization/xen_memory	2013-08-23 21:31:56.613334934 +0200
++++ munin/plugins/virtualization/xen_memory	2013-08-23 21:41:06.290001570 +0200
+@@ -12,14 +12,14 @@
+ #     autoconf  (optional - used by munin-config)
+ #
+ 
+-XM='/usr/sbin/xm'
++XM='/usr/sbin/xl'
+ 
+ if [ "$1" = "autoconf" ]; then
+         if [ -e $XM ]; then
+                 echo yes
+                 exit 0
+         fi
+-        echo "no (xm not found)"
++        echo "no (xl not found)"
+         exit 1
+ fi
+ 
+--- munin.orig/plugins/virtualization/xen_traffic_	2013-08-23 21:31:56.616668173 +0200
++++ munin/plugins/virtualization/xen_traffic_	2013-08-23 23:17:57.023334928 +0200
+@@ -11,10 +11,10 @@
+ NAME=$( echo $DOMAIN | sed -e's/-/_/g' ) 
+ 
+ if [ "$1" = "autoconf" ]; then
+-    if which xm > /dev/null ; then
++    if which xl > /dev/null ; then
+         echo yes
+     else
+-        echo "no (xm not found)"
++        echo "no (xl not found)"
+         exit 1
+     fi
+     if [ -r /proc/net/dev ]; then
+@@ -27,7 +27,7 @@
+ fi
+ 
+ if [ "$1" = "suggest" ]; then
+-    xm list | awk '{print $1}' | egrep -v "^(Name|Domain-0)"
++    xl list | awk '{print $1}' | egrep -v "^(Name|Domain-0)"
+     exit 0
+ fi
+ 
+@@ -47,7 +47,7 @@
+     exit 0
+ fi
+ 
+-dev=$( xm network-list $DOMAIN | egrep "^[0-9]+" | sed 's@^.*vif/\([0-9]*\)/\([0-9]*\).*$@vif\1.\2@')
++dev=$( xl network-list $DOMAIN | egrep "^[0-9]+" | sed 's@^.*vif/\([0-9]*\)/\([0-9]*\).*$@vif\1.\2@')
+ 
+ awk -v interface="$dev" \
+     'BEGIN { gsub(/\./, "\\.", interface) } \
+--- munin.orig/plugins/virtualization/xen_traffic_all	2013-08-23 21:31:56.616668173 +0200
++++ munin/plugins/virtualization/xen_traffic_all	2013-08-23 21:45:30.156668240 +0200
+@@ -10,10 +10,10 @@
+ #%# capabilities=autoconf
+ 
+ if [ "$1" = "autoconf" ]; then
+-    if which xm > /dev/null ; then
++    if which xl > /dev/null ; then
+         echo yes
+     else
+-        echo "no (xm not found)"
++        echo "no (xl not found)"
+         exit 1
+     fi
+     if [ -r /proc/net/dev ]; then
+@@ -30,7 +30,7 @@
+     echo 'graph_vlabel bits received (-) / sent (+) per ${graph_period}'
+     echo 'graph_args --base 1024 -l 0'
+     echo 'graph_category xen'
+-    DOMAINS=$(xm list | awk '{print $1}' | egrep -v "^(Name|Domain-0)")
++    DOMAINS=$(xl list | awk '{print $1}' | egrep -v "^(Name|Domain-0|\(null)")
+     for dom in $DOMAINS; do
+         name=$( echo $dom | tr .- __ )
+         #echo $name"UP.label $name"
+@@ -48,11 +48,11 @@
+     exit 0
+ fi
+ 
+-DOMAINS=$(xm list | awk '{print $1}' | egrep -v "^(Name|Domain-0)")
++DOMAINS=$(xl list | awk '{print $1}' | egrep -v "^(Name|Domain-0|\(null)")
+ for dom in $DOMAINS; do
+-		dev=$( xm list $dom --long | awk '/vifname / { print $2 }' | sed 's/)//' )
++		dev=$( xl list $dom --long | awk '/vifname / { print $2 }' | sed 's/)//' )
+ 		if [ "$dev" == "" ]; then
+-	    dev=$( xm network-list $dom |\
++	    dev=$( xl network-list $dom |\
+ 	        egrep "^[0-9]+" | sed 's@^.*vif/\([0-9]*\)/\([0-9]*\).*$@vif\1.\2@')
+ 		fi
+     name=$( echo $dom | tr .- __ ) 
+--- munin.orig/plugins/virtualization/xen_vbd	2013-08-23 21:31:56.620001488 +0200
++++ munin/plugins/virtualization/xen_vbd	2013-08-23 23:19:52.040001471 +0200
+@@ -13,7 +13,7 @@
+ #%# capabilities=autoconf
+ 
+ # Location of xm tools
+-$XM = '/usr/sbin/xm';
++$XM = '/usr/sbin/xl';
+ $XMTOP = '/usr/sbin/xentop';
+ 
+ # ah, parameters coming in 
+@@ -90,9 +90,9 @@
+ @stats = split (/\n/, pop(@chunks));
+ 
+ shift(@stats);
+-shift(@stats);
+-shift(@stats);
+-shift(@stats);
++#shift(@stats);
++#shift(@stats);
++#shift(@stats);
+ 
+ foreach $domain (@stats)
+ {
