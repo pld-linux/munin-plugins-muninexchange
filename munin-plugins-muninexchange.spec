@@ -1,16 +1,35 @@
 # TODO:
 #	- better descriptions?
 #
+%define	contrib_package()\
+%package %1\
+Summary:	Munin plugins from MuninExchange - %1\
+Summary(pl.UTF-8):	Wtyczki munina z MuninExchange - %1\
+Group:		Daemons\
+Requires:	munin-node\
+\
+%description %1\
+This package contains plugins for Munin from MuninExchange repository\
+located at https://github.com/munin-monitoring/contrib/.\
+\
+%description %1 -l pl.UTF-8\
+Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,\
+znajdującym się na https://github.com/munin-monitoring/contrib/.\
+\
+%files %1 -f %1.list\
+%defattr(644,root,root,755)\
+%{nil}
+
 %include	/usr/lib/rpm/macros.perl
 Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
-Version:	20110326
-Release:	1
+Version:	20130823
+Release:	0.1
 License:	GPL
 Group:		Daemons
-Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	a1e0a65d643cc914b4aa2012842186ab
+Source0:	https://github.com/munin-monitoring/contrib/tarball/master/%{name}.tar.gz
+# Source0-md5:	d0b1caf2e18a0edc349184f51d7d0cb5
 Patch0:		%{name}-vserver.patch
 Patch1:		%{name}-postfix.patch
 Patch2:		%{name}-other.patch
@@ -186,7 +205,7 @@ Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
 znajdującym się na <http://muninexchange.projects.linpro.no/>.
 
 %prep
-%setup -q
+%setup -q -n munin-monitoring-contrib-538cdc9
 
 find -type f -print0 | xargs -0 dos2unix
 
@@ -223,6 +242,9 @@ done
 cp -a */* $RPM_BUILD_ROOT%{_datadir}/munin/plugins/
 chmod 755 $RPM_BUILD_ROOT%{_datadir}/munin/plugins/*
 
+touch $RPM_BUILD_ROOT/dupa
+echo /dupa >dupa.list
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -243,3 +265,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files web-servers -f web-servers.list
 %defattr(644,root,root,755)
+
+%contrib_package dupa
