@@ -6,7 +6,7 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20130823
-Release:	3
+Release:	4
 License:	GPL
 Group:		Daemons
 Source0:	https://github.com/munin-monitoring/contrib/tarball/master/%{name}.tar.gz
@@ -27,7 +27,7 @@ BuildRequires:	rpmbuild(macros) >= 1.268
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq_perl		DateTime::Format::ISO8601 Sys::Virt VMware::.*
+%define		_noautoreq_perl		DateTime::Format::ISO8601 Sys::Virt Sys::Virt::.* VMware::.*
 
 %description
 This package contains plugins for Munin from MuninExchange repository
