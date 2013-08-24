@@ -6,7 +6,7 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20130823
-Release:	6
+Release:	7
 License:	GPL
 Group:		Daemons
 Source0:	https://github.com/munin-monitoring/contrib/tarball/master/%{name}.tar.gz
@@ -77,9 +77,9 @@ grep -r bin/env -l plugins/ | xargs sed -i -e '1{
 
 find plugins/ -type f | xargs sed -i -e '1{
 	s,#!.*/usr/local/bin/,#!/usr/bin/,
-	s,#!/opt/csw/bin/ruby,#!%{__ruby},
-	s,#!/usr/bin/bash,#!/bin/bash,
-	s,#!/sbin/sh,#!/bin/sh,
+	s,#!.*/opt/csw/bin/ruby,#!%{__ruby},
+	s,#!.*/usr/bin/bash,#!/bin/bash,
+	s,#!.*/sbin/sh,#!/bin/sh,
 }'
 
 # cleanup backups after patching
