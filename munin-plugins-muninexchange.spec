@@ -6,7 +6,7 @@ Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
 Version:	20130823
-Release:	5
+Release:	6
 License:	GPL
 Group:		Daemons
 Source0:	https://github.com/munin-monitoring/contrib/tarball/master/%{name}.tar.gz
@@ -53,7 +53,7 @@ Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,\
 znajdującym się na https://github.com/munin-monitoring/contrib/.\
 \
 %files %1 -f %1.list\
-%defattr(644,root,root,755)\
+%defattr(755,root,root,755)\
 %{nil}
 
 %prep
