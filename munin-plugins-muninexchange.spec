@@ -31,11 +31,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package contains plugins for Munin from MuninExchange repository
-located at https://github.com/munin-monitoring/contrib/.
+located at <https://github.com/munin-monitoring/contrib/>.
 
 %description -l pl.UTF-8
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,
-znajdującym się na https://github.com/munin-monitoring/contrib/>.
+znajdującym się na <https://github.com/munin-monitoring/contrib/>.
 
 %define	contrib_package()\
 %package %1\
@@ -46,11 +46,11 @@ Requires:	munin-node\
 \
 %description %1\
 This package contains plugins for Munin from MuninExchange repository\
-located at https://github.com/munin-monitoring/contrib/.\
+located at <https://github.com/munin-monitoring/contrib/>.\
 \
 %description %1 -l pl.UTF-8\
 Ten pakiet zawera wtyczki dla Munina z repozytorium MuninExchange,\
-znajdującym się na https://github.com/munin-monitoring/contrib/.\
+znajdującym się na <https://github.com/munin-monitoring/contrib/>.\
 \
 %files %1 -f %1.list\
 %defattr(755,root,root,755)\
