@@ -1,7 +1,6 @@
 # TODO:
 #	- better descriptions?
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	Munin plugins from MuninExchange
 Summary(pl.UTF-8):	Wtyczki munina z MuninExchange
 Name:		munin-plugins-muninexchange
